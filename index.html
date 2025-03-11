@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to AI Image</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section class="image-generator">
+        <div class="content">
+            <h1>Words Become Visuals</h1>
+            <p>Step into a world where <bold>Words Become Visuals</bold>, 
+                transforming your text into stunning art that speaks to the soul. 
+                Let your words paint vibrant pictures and bring your imagination to life!
+            </p>
+            <form action="#" class="generate-form">
+                <input type="text" class="prompt-input" placeholder="Enter your Words to Visualize..." required>
+                <div class="controls">
+                    <select class="img-quty" title="Select number of images">
+                        <option value="1">1 image</option>
+                        <option value="2">2 images</option>
+                        <option value="3">3 images</option>
+                        <option value="4" selected>4 images</option>
+                    </select>
+                    <button type="submit" class="generate-btn" title="Generate Images">Generate</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <section class="generate-images">
+        <p class="img-qty-display">Select an image quantity and generate!</p>
+    </section>
+</body>
+</html>
