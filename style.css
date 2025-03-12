@@ -7,6 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 /* <--------------------section 1------------------> */
+.note {
+    font-size: 0.9rem;
+    color: rgb(165, 163, 167);
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
 .image-generator{
     background-image: url("/images/Words\ Become\ Visuals\ background\ image.png");
     background-size: cover;
@@ -45,6 +53,10 @@
 
 .image-generator p{
     font-size: 1rem;
+}
+
+.image-generator p i{
+    font-weight: 600;
 }
 
 .generate-form{
@@ -88,14 +100,6 @@
 }
 
 /* <--------------------section 2------------------> */
-.generate-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
 /* Loading Overlay */
 .loading-overlay {
     display: none;
@@ -125,6 +129,15 @@
     100% { transform: rotate(360deg); }
 }
 
+/* Style the generated images container */
+.generate-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 /* Image Cards */
 .img-card {
     position: relative;
@@ -134,12 +147,6 @@
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.img-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Images inside Cards */
@@ -148,28 +155,43 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s ease-in-out;
+}
+
+.img-card:hover .image {
+    transform: scale(1.05);
 }
 
 /* Download Button */
-/* Download Button (Initially Hidden) */
+/* Download Button */
 .img-dwd {
     position: absolute;
     bottom: 10px;
     right: 10px;
     width: 40px;
-    opacity: 0; /* Hidden initially */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a dark background for visibility */
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the Download Icon is Properly Displayed */
+.img-dwd img {
+    width: 40px;  /* Adjust size for better visibility */
+    height: 40px;
+    display: block;
+    border-radius: 50%;
 }
 
 /* Show Download Button on Hover */
 .img-card:hover .img-dwd {
-    opacity: 1; /* Show when hovering */
-    transform: scale(1.2); /* Slight zoom effect */
+    opacity: 1;
 }
-
-
-
-
 
 
 
@@ -205,17 +227,7 @@
     .generate-form .controls{
         margin-top: 1.2rem;
     }
+    .note{
+        margin-top: 3rem;
+    }
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-/*  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 */
